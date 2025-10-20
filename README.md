@@ -74,12 +74,12 @@ If any data or page is missing, it is logged instead of causing a crash.
 
 Sample Movie JSON:
 
-json
+
 <img width="734" height="169" alt="image" src="https://github.com/user-attachments/assets/fb4f4145-4d7f-4cc6-b633-495c38cff502" />
 
 All TV Shows JSON:
 
-json
+
 <img width="1061" height="765" alt="image" src="https://github.com/user-attachments/assets/a985732c-cfe9-4455-a015-a0ac875da01a" />
 
 
