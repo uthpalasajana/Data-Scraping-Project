@@ -1,5 +1,9 @@
 # 🎬 Movie Data Scraper
-Spring Boot | Selenium | JSON | Headless Chrome
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+![Headless Chrome](https://img.shields.io/badge/Headless%20Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 
 A fully automated web scraping service that collects movie and TV show data from [todaytvseries.one](https://todaytvseries.one), including titles, posters, genres, and descriptions.  
 Built with **Spring Boot**, **Selenium** this project display how to scrap data from a simple website.
