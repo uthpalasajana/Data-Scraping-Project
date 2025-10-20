@@ -26,8 +26,9 @@ public class MovieDataScraperApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MovieDataScraperApplication.class, args);
 
-
-
 	}
+
+
+
 
 }

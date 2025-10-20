@@ -58,21 +58,42 @@ public class MovieService {
     private List<String> readMovieNames(String filePath) {
         List<String> names = new ArrayList<>();
 
-        //use file handling to read movies the json file
         try (FileReader reader = new FileReader(filePath)) {
             JsonElement jsonElement = JsonParser.parseReader(reader);
-            if (jsonElement.isJsonArray()) {
-                JsonArray array = jsonElement.getAsJsonArray();
-                for (JsonElement element : array) {
-                    names.add(element.getAsString());
-                }
+
+
+
+            JsonArray array = jsonElement.getAsJsonArray();
+//validate for empty json file without any names
+            if (array.size() == 0) {
+                logger.warn(" The JSON file contains no  names: " + filePath);
+                return names;
             }
+
+            for (JsonElement element : array) {
+                String movieName = element.getAsString().trim();
+
+//validation for same movie name
+                if (names.contains(movieName)) {
+                    logger.warn("Duplicate name found: " + movieName );
+                    continue;
+                }
+
+                names.add(movieName);
+            }
+
+            logger.info("Loaded " + names.size() + " unique movie names from file.");
+
+        } catch (IOException e) {
+            logger.error(" Error reading file: " + filePath + " " + e.getMessage());
         } catch (Exception e) {
-           logger.error(e.getMessage());
+            logger.error(" Error parsing movie names from JSON: " + e.getMessage());
         }
 
         return names;
     }
+
+
 
     //this method calls necessary method in this class in order and it has been called inside the main class
     @Scheduled(fixedRate = 30 * 60 *1000)  //schedual to run this method for every 30 minutes
