@@ -47,7 +47,7 @@ Built with **Spring Boot**, **Selenium** this project display how to scrap data 
    Add input movie list :
    Create a file: src/main/resources/movieInput.json
         
-   json
+
    <img width="299" height="131" alt="image" src="https://github.com/user-attachments/assets/a6669d9f-dd34-4807-b507-6a06bcb550d5" />
 
    Build and run the application
